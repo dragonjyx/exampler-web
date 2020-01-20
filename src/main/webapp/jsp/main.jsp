@@ -10,8 +10,8 @@
 <head>
     <title>main</title>
 </head>
-<body>
-    main：
+<body style="color: red">
+    main JSTL：
     ${applicationName}
 
 </body>

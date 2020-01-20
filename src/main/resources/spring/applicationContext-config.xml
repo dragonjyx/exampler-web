@@ -9,7 +9,7 @@
 
     <!-- 生产环境 -->
     <beans profile="production">
-        <util:properties id="applicationConfig" location="file:${project.conf.path}/web-example/dubbo.properties"/>
+        <util:properties id="applicationConfig" location="file:${project.conf.path}/web-example/application.properties"/>
 
     </beans>
 
