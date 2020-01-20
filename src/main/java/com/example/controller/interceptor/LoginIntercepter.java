@@ -19,10 +19,14 @@ public class LoginIntercepter implements HandlerInterceptor {
 
     private Logger logger = LoggerFactory.getLogger(LoginIntercepter.class);
 
+    private String tk;
+
     @Override
     public boolean preHandle(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Object o) throws Exception {
-
+        String token = httpServletRequest.getHeader("token");
         logger.warn("LoginIntercepter ----- preHandle");
+
+
 
         return true;
     }

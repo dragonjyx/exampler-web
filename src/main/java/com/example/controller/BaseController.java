@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
 /**
  * @author oyxl 10071355
  * @version 1.0
@@ -27,7 +30,8 @@ public class BaseController {
 
 
     @RequestMapping(value="main",method=RequestMethod.GET)
-    public String main(Model model){
+    public String main(HttpServletRequest request, HttpServletResponse response, Model model){
+        request.getSession();
         logger.info("applicationName:{}",applicationName);
         model.addAttribute("applicationName",applicationName);
         return "main";
